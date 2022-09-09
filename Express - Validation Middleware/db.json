@@ -1,0 +1,20 @@
+{
+  "movies": [
+    {
+      "ID": 1,
+      "Name": "Brahmastra",
+      "Rating": 9,
+      "Description": "New",
+      "Genre": "Religious",
+      "Cast": "Ranbir"
+    },
+    {
+      "ID": 2,
+      "Name": "Darlings",
+      "Rating": 9.8,
+      "Description": "New",
+      "Genre": "Comedy and Drama",
+      "Cast": "Alia"
+    }
+  ]
+}
