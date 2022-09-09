@@ -1,8 +1,0 @@
-{
-  "products": [
-    { "productId": 1, "name": "shirt" },
-    { "productId": 2, "name": "shirt" },
-    { "productId": 3, "name": "saree" },
-    { "productId": 4, "name": "suit" }
-  ]
-}
