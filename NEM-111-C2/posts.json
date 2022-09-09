@@ -1,0 +1,7 @@
+{
+  "posts": [
+    { "id": 3, "title": "nem-111", "status": true, "author": "rj" },
+    { "id": 4, "title": "nem-101", "status": true, "author": "yk" },
+    { "id": 9, "title": "nem-201", "status": true, "author": "sj" }
+  ]
+}

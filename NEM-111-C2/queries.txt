@@ -1,0 +1,4 @@
+1. db.exam.find({ $or: [{"age":{$mod:[2,0]} }, {"family_members": {$mod:[2,0]}}]})
+2. db.exam.updateMany({$and : [{gender:"Male"},{age:{"$mod":[2,1]}}]},{$inc:{age:-1}})
+3-i. db.exam.updateMany({$and : [{native :"United States"},{age:{"$lte":23}}]},{$unset:{relocate_to:""}})
+3-ii. db.exam.find({$and : [{native :"United States"},{age:{"$lte":23}}]}).sort({family_members:1})

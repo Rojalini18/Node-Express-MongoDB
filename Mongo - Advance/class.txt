@@ -1,0 +1,62 @@
+//comparison operators
+    1. lt - less than -  db.person.find({age:{$lt:28}},{_id:0}).pretty()
+    2. gt - greater than -  db.person.find({age:{$gt:28}},{_id:0}).pretty()
+    3. lte - less than or equal to - db.person.find({age:{$lte:28}},{_id:0}).pretty()
+    4. gte - greater than or equal to -  db.person.find({age:{$gte:28}},{_id:0}).pretty()
+    5. ne - not equal to - db.person.find({age{$ne:28}},{_id:0}).pretty()
+    6. eq - equal to -  db.person.find({age{$eq:28}},{_id:0}).pretty()
+
+//logical operators
+    1. if all conditions are satisfied(use and)
+    and - db.person.find({age:{$gt:28},gender:"Male"},{_id:0}).pretty() 
+        also we can write - db.person.find({$and : [{age:30}, {gender:"Male"}]}).pretty()
+
+    2. if any of them satisfied(use or)
+    or -  db.person.find({$or : [{gender:"Male"},{age:{$gt:18}}]}).pretty()
+    
+    3. if non of them satisfied(use nor)
+    nor -  db.person.find({$nor : [{age:52} , {native: "United States"}]}).pretty()
+
+//field 
+set -  db.person.updateOne({name:"vinuth"}, {$set: {age:36}  })
+    1. if the key exists -
+        $exists -  db.person.find({age:{$exists:true}}).pretty()
+
+    2. find the type if there are multiple(apply on value only not key) 
+        $type - db.person.find({age:{$type:"string"}}).pretty()
+
+    3.  $inc -  db.person.updateOne({name:"vinuth"}, {$inc: {age:1}  })
+    4.  $dec -  db.person.updateOne({name:"vinuth"}, {$inc: {age: -1}  })
+    5.  $min - find the min
+    6.  $max - find the max
+    7.  $rename - rename the feild itself
+    8.  $set - add a new field or update an existing field
+
+
+//array 
+    1.all -
+    2. in - 
+    3. size - 
+
+//extra
+    1. even age -  db.person.find({age:{$mod: [2, 0]}}).pretty()
+
+//exam 
+	
+1)db.eva.find({ $or: [{"age":{$mod:[2,0]} }, {"family_members": {$mod:[2,0]}}]})
+2.)  db.eva.updateMany({$and : [{gender:"Male"},{age:{"$mod":[2,1]}}]},{$inc:{age:-1}})
+3a.)  db.eva.updateMany({$and : [{native :"United States"},{age:{"$lte":23}}]},{$unset:{relocate_to:""}})
+3b.)  db.eva.find({$and : [{native :"United States"},{age:{"$lte":23}}]}).sort({family_members:1})
+
+
+
+
+
+
+
+
+
+
+
+
+
