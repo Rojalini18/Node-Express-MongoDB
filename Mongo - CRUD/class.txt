@@ -1,0 +1,20 @@
+//mongo CRUD
+//mongo Atlas
+
+
+
+//Database - collection -  documents/objects
+// commands
+1. use web-16
+2. db web-16
+3. db createCollection("students") //name of the collection you want to create
+4. show collections
+5. db.students //if you want to create a new collection in students Database
+6. db.students.insertOne({"name": "rj","batch": "NEM-111"})
+7. db.dropDatabase() //to delete the Database
+
+//CRUD
+//create- insertOne() , insertMany([{},{},{}])
+//read- db.students.find(), db.students.findOne({})
+//update - updateOne(), updateMany()
+//find, skip, limit, sort(1 or -1)
