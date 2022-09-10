@@ -1,0 +1,26 @@
+POST user/register ---> user will signup
+POST user/login    ----> user will login and get token
+
+//token - jwt.sign({email, userID }, "shhhh") - asdjflajsdflajdf
+
+//authenticated -> verify token -> asdjflajsdflajdf --> userID
+
+POST notes/create  ----> willl create a note
+
+GET notes/
+  userId - token
+  find({userId:userId})
+
+PATCH notes/:noteID/edit
+
+notesID - 2
+
+DELETE notes/:notesID/delete
+       const note = NotesModel.find({_id:notesID})
+       note.userID === userId ? do the op : not authorised
+
+//Frontend
+//regsiter and //login
+//get notes
+
+
